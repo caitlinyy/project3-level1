@@ -3,6 +3,7 @@
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
-    "react/jsx-no-useless-fragment": 0
+    "react/jsx-no-useless-fragment": 0,
+    "max-len": ["error", { "code": 400 }]
   }
 }
