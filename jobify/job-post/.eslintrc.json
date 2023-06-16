@@ -6,7 +6,7 @@
     "react/jsx-no-useless-fragment": 0,
     "import/no-extraneous-dependencies": 0,
     "react/jsx-one-expression-per-line": 0,
-    "max-len": ["error", { "code": 400 }]
+    "max-len": 0
   },
   "settings": {
     "import/resolver": {
