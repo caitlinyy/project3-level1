@@ -6,11 +6,12 @@ import Image from "next/image";
 
 import Button from "components/Button/Button";
 
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #f0f4f8;
-`;
+import { Container } from "./page.styles";
+// const Container = styled.div`
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   background-color: #f0f4f8;
+// `;
 
 import { Navigation } from "components/Navigation/Navigation.styles";
 // const Navigation = styled.nav`
