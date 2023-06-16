@@ -12,12 +12,13 @@ const Container = styled.div`
   background-color: #f0f4f8;
 `;
 
-const Navigation = styled.nav`
-  height: 96px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-`;
+import { Navigation } from "components/Navigation/Navigation.styles";
+// const Navigation = styled.nav`
+//   height: 96px;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 16px;
+// `;
 
 const HeroContainer = styled.section`
   display: flex;
