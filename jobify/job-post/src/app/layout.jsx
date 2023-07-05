@@ -1,9 +1,28 @@
+"use client";
 // import React from 'react'
 import "./globals.css";
 import { Inter } from "next/font/google";
-import StyleComponentsRegistry from "@/app/registry";
+import StyleComponentsRegistry from "app/registry";
+import { ThemeProvider } from "styled-components";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const light = {
+  colors: {
+    primary: "rgb(44, 177, 188)",
+    secondary: "rgb(44, 177, 188,0.8)",
+    gray: "rgb(72,101,129)",
+  },
+  borderRadius: "5px",
+  backgroundColor: "",
+};
+
+//dark theme
+// const dark = {
+//   colors: {
+//     primary: "darkblue",
+//   },
+// }
 
 export const metadata = {
   title: "Create Next App",
@@ -12,12 +31,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html>
-      <body>
+    <html lang="en">
+      <body className={inter.className}>
         <StyleComponentsRegistry>
-          {children}
-          </StyleComponentsRegistry> 
-        </body>
+          <ThemeProvider theme={light}>{children}</ThemeProvider>
+        </StyleComponentsRegistry>
+      </body>
     </html>
   );
 }
