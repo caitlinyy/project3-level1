@@ -4,9 +4,13 @@ import Logo from "components/Logo/Logo";
 import Card from "components/Card/Card";
 import FormInputRow from "components/Form/FormInputRow";
 import { useState } from "react";
+import { useAppContext } from "context/appContext";
 // import Button from "components/Button/Button";
 
 const RegisterPage = () => {
+  // const context = useAppContext();
+  // console.log(context);
+
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -35,7 +39,7 @@ const RegisterPage = () => {
       <Card>
         <Logo />
         <FormTitle>Register</FormTitle>
-        <Form onSubmit={handleOnSubmit}>
+        <Form data-testid="form" onSubmit={handleOnSubmit}>
           <FormInputRow onChange={handleOnChange} name="name" type="text" />
           <FormInputRow onChange={handleOnChange} name="email" type="text" />
           <FormInputRow onChange={handleOnChange} name="password" type="password" />

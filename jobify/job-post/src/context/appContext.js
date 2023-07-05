@@ -1,16 +1,16 @@
 import { useContext, createContext } from "react";
 
 const initialState = {
-  user: undefined,
+  user: "undefined",
 
 }
 
-const AppContext = createContext()
+const AppContext = createContext(null)
 
 export const AppProvider = ({ children }) => {
-  <AppContext.Provider value={initialState}>
+  return (<AppContext.Provider value={initialState}>
     {children}
-  </AppContext.Provider>
+  </AppContext.Provider>)
 }
 
 export const useAppContext = () => useContext(AppContext)
