@@ -1,25 +1,37 @@
-import { HeroContainer, InfoContainer, Title, Description, HeroImageContainer } from "./HeroContainer.styles";
+import {
+  HeroContainer as Container,
+  InfoContainer,
+  Title,
+  Description,
+  HeroImageContainer,
+} from "./HeroContainer.styles";
 import Image from "next/image";
 import Button from "components/Button/Button";
 
-function HeroContainer (){
+import Link from "next/link";
+
+const HeroContainer = () => {
   return (
-    <HeroContainer>
+    <Container>
       <InfoContainer>
         <Title>
           Job <span>Tracking</span> App
         </Title>
-        <Description className="description">
+        <Description>
           I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue bottle single-origin coffee chia. Aesthetic
           post-ironic venmo, quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch narwhal.
         </Description>
-        <Button href="#">Login/Register</Button>
+        {/* <Link href="/register">
+          <Button>Login/Register</Button>
+        </Link> */}
+        {/* <Button as="a" href="/register">Login/Register</Button> */}
+        <Button href="/register">Login/Register</Button>
       </InfoContainer>
 
       <HeroImageContainer>
         <Image src="./hero.svg" alt="heroBg" fill />
       </HeroImageContainer>
-    </HeroContainer>
+    </Container>
   );
 };
 export default HeroContainer;

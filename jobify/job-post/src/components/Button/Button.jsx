@@ -22,7 +22,17 @@ import { StyledButton } from "./Button.styles";
 //const{a}=obj
 
 //父传子
-function Button({children}) {
-  return <StyledButton>{children}</StyledButton>;
+function Button({ as, href, children, className, ...props }) {
+  return (
+    // <StyledButton {...props} as={href?.length ? "a" : "button"} href={href} className={className} variant="">
+    <StyledButton 
+    {...props} 
+    as={href?.length ? "a" : "button"} 
+    href={href} 
+    className={className}
+    >
+      {children}
+    </StyledButton>
+  );
 }
 export default Button;

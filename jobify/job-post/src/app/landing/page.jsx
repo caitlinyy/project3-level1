@@ -1,10 +1,10 @@
 "use client";
 // 服务端渲染
-import styled from "styled-components";
+// import styled from "styled-components";
 
-import Image from "next/image";
+// import Image from "next/image";
 
-import Button from "components/Button/Button";
+// import Button from "components/Button/Button";
 
 import { Container } from "./page.styles";
 // const Container = styled.div`
@@ -21,66 +21,76 @@ import { Navigation } from "components/Navigation/Navigation.styles";
 //   padding: 0 16px;
 // `;
 
-const HeroContainer = styled.section`
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 10%; */
-  align-items: center;
-  padding: 0 16px;
+import HeroContainer from "components/HeroContainer/HeroContainer";
+// const HeroContainer = styled.section`
+//   display: flex;
+//   justify-content: space-between;
+//   /* margin-top: 10%; */
+//   align-items: center;
+//   padding: 0 16px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-`;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+// `;
 
-const InfoContainer = styled.div`
-  width: 100%;
-  /* margin-top: 10rem; */
+// const InfoContainer = styled.div`
+//   width: 100%;
+//   /* margin-top: 10rem; */
 
-  @media (min-width: 768px) {
-    width: 49%;
-  }
-`;
+//   @media (min-width: 768px) {
+//     width: 49%;
+//   }
+// `;
 
-const Title = styled.h1`
-  font-size: 48px;
-  span {
-    /* color:#2cb1bc; */
-    color: ${(prop) => prop.theme.colors.primary};
-  }
-`;
+// const Title = styled.h1`
+//   font-size: 48px;
+//   span {
+//     /* color:#2cb1bc; */
+//     color: ${(prop) => prop.theme.colors.primary};
+//   }
+// `;
 
-const Description = styled.p`
-  color: ${(prop) => prop.theme.colors.gray};
-  /* margin: 1.5rem 0; */
-  margin: 24px 0;
-  /* width: 40rem; */
-  line-height: 2rem;
-`;
+// const Description = styled.p`
+//   color: ${(prop) => prop.theme.colors.gray};
+//   /* margin: 1.5rem 0; */
+//   margin: 24px 0;
+//   /* width: 40rem; */
+//   line-height: 2rem;
+// `;
 
-const HeroImageContainer = styled.div`
-  width: 49%;
-  height: 470px;
-  position: relative;
+// const HeroImageContainer = styled.div`
+//   width: 49%;
+//   height: 470px;
+//   position: relative;
 
-  display: none;
+//   display: none;
 
-  @media (min-width: 768px) {
-    display: block;
-  }
-`;
+//   @media (min-width: 768px) {
+//     display: block;
+//   }
+// `;
+
+import Logo from "components/Logo/Logo";
+import { useAppContext } from "context/appContext";
 
 // https://www.jobify.live/landing  http://localhost:3000/landing
 const LandingPage = () => {
+  // const { state } = useAppContext();
+  // console.log(state);
+
   return (
     <Container>
       <Navigation>
-        <Image src="./logo.svg" width={164} height={50} alt="Picture of the author" />
+        {/* <Image src="./logo.svg" width={164} height={50} alt="Picture of the author" /> */}
+        <Logo />
       </Navigation>
 
-      <HeroContainer>
+      <HeroContainer />
+
+      {/* <HeroContainer>
         <InfoContainer>
           <Title>
             Job <span>Tracking</span> App
@@ -95,7 +105,7 @@ const LandingPage = () => {
         <HeroImageContainer>
           <Image src="./hero.svg" alt="heroBg" fill />
         </HeroImageContainer>
-      </HeroContainer>
+      </HeroContainer> */}
     </Container>
   );
 };

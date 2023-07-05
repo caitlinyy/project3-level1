@@ -7,11 +7,16 @@ export const HeroContainer = styled.section`
   align-items: center;
   padding: 0 16px;
 
-  position: absolute;
+  height: 575px;
+  /* position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
+
+  @media (min-width: 768px) {
+    margin-top: 120px;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -40,13 +45,16 @@ export const Description = styled.p`
 `;
 
 export const HeroImageContainer = styled.div`
+  /* phone first */
   width: 49%;
   height: 470px;
   position: relative;
 
   display: none;
 
+  /* window */
   @media (min-width: 768px) {
     display: block;
+    top: 30px;
   }
 `;
