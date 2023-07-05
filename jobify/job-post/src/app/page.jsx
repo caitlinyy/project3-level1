@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styled from "styled-components";
+// import styled from "styled-components";
 import styles from "./page.module.css";
 import RedirectTemplate from "components/RedirectTemplate/RedirectTemplate";
 

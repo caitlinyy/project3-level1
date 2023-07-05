@@ -22,9 +22,7 @@ const dark = {
 function App({ children }) {
   return (
     <ThemeProvider theme={light}>
-      {/* <AppProvider> */}
-      {children}
-      {/* </AppProvider> */}
+      <AppProvider>{children}</AppProvider>
     </ThemeProvider>
   );
 }
